@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.examilw.myresto.DAO"})
+@ComponentScan(basePackages = {"com.examilw"})
 public class myresto {
 
     public static void main(String[] args) {

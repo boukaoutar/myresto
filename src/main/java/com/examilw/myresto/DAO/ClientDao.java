@@ -32,16 +32,18 @@ public class ClientDao {
 
     public Client getClient(String email) {
         final String emailFinal = email;
-        String sql = "SELECT firstName,lastName,email FROM client where email = ?";
+        String sql = "SELECT id,firstName,lastName,email FROM client where email = ?";
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
             preparedStatement.setString(1, emailFinal);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
+                int id = resultSet.getInt("id");
                 String firstName = resultSet.getString("firstName");
                 String lastName = resultSet.getString("lastName");
                 String mail = resultSet.getString("email");
                 Client client = new Client(email,firstName,lastName);
+                client.setId(id);
                 return client;
             }
         } catch (SQLException e) {

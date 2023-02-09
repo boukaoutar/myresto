@@ -38,7 +38,7 @@ public class CommandController {
         return commandDAO.getAllCommands();
     }
 
-    @GetMapping("/api/command/{id]")
+    @GetMapping("/api/command/{id}")
     public Command getCommand(@PathVariable int id) {
         return commandDAO.getCommand(id);
     }
