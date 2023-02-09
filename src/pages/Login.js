@@ -48,8 +48,8 @@ const handleSubmit = e => {
 }
 
 
-const [email, setEmail] = useState()
-const [password, setPassword] = useState()
+const [email, setEmail] = ""
+const [password, setPassword] = ""
 
 export default ({
   logoLinkUrl = "#",
