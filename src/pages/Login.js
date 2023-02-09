@@ -7,6 +7,10 @@ import {css} from "styled-components/macro"; //eslint-disable-line
 import illustration from "images/login-illustration.svg";
 import logo from "images/6418FC.svg";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
+import axios from 'axios';
+import { useEffect } from "react";
+import { useState } from "react";
+
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
@@ -34,6 +38,19 @@ const IllustrationImage = styled.div`
   ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
 `;
 
+const handleSubmit = e => {
+  e.preventDefault()
+  axios
+    .post("localhos:8080/api/clients/Login", { email, password })
+    .then(response => {
+      console.log(response)
+    })
+}
+
+
+const [email, setEmail] = useState()
+const [password, setPassword] = useState()
+
 export default ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
@@ -43,7 +60,8 @@ export default ({
   forgotPasswordUrl = "#",
   signupUrl = "/components/innerPages/SignupPage",
 
-}) => (
+}) =>
+ (
   <AnimationRevealPage>
     <Container>
       <Content>
@@ -58,11 +76,16 @@ export default ({
             <Heading>{headingText}</Heading>
             <FormContainer>
               <Form>
-                <Input type="email" placeholder="Email" />
-                <Input type="password" placeholder="Mot de passe" />
+                <Input type="email" placeholder="Email"  
+                value="email"
+                 onChange={e => setEmail(e.target.value)} />
+                <Input type="password" placeholder="Mot de passe" 
+                value={password}
+                onChange={e => setPassword(e.target.value)} 
+                />
                 <SubmitButton type="submit">
                   <SubmitButtonIcon className="icon" />
-                  <span className="text">{submitButtonText}</span>
+                  <span className="text" onClick={handleSubmit}>{submitButtonText}</span>
                 </SubmitButton>
               </Form>
               <p tw="mt-6 text-xs text-gray-600 text-center">

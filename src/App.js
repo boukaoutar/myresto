@@ -104,10 +104,24 @@ import ComponentRenderer from "ComponentRenderer.js";
 import MainLandingPage from "MainLandingPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from 'axios';
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
+
+  const [data,setData] = useState([])
+
+useEffect(() => {
+axios.get("localhos:8080/api/clients/createAccount")
+.then(res =>{
+  console.log(res.data)
+  setData(res.data)
+} )
+.catch(err => console.log(err))
+},[])
 
 
   return (
