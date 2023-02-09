@@ -78,19 +78,13 @@
   margin-right: auto;
 }
 
-a {
-  border: 0 none;
-  outline: 0;
-  text-decoration: none;
-}
+
 
 strong {
   font-weight: bold;
 }
 
-p {
-  margin: 0.75rem 0 0;
-}
+
 
 h1 {
   font-size: 0.75rem;
@@ -448,23 +442,6 @@ aside {
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 960px) {
-  aside {
-    padding: 0 1rem 0 0;
-  }
-  .summary {
-    width: 28%;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  main {
-    width: 100%;
-  }
-  .product-details {
-    padding: 0 1rem;
-  }
-}
 
 .monPanier{
   margin-left: 150px;

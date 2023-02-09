@@ -57,10 +57,13 @@ export default ({
             {description && <Description>{description}</Description>}
             <Form action={formAction} method={formMethod}>
               <Input type="email" name="email" placeholder="Votre email" />
+              <hr></hr>
               <Input type="text" name="name" placeholder="Votre nom" />
+              <hr></hr>
               <Input type="text" name="subject" placeholder="Sujet" />
+              <hr></hr>
               <Textarea name="message" placeholder="Votre message" />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
+              <SubmitButton type="submit" href="mailto:kaoutarboulguid@gmail.com">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>

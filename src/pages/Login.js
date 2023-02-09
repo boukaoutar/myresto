@@ -65,15 +65,11 @@ export default ({
                   <span className="text">{submitButtonText}</span>
                 </SubmitButton>
               </Form>
-              <p tw="mt-6 text-xs text-gray-600 text-center">
-                <a href={forgotPasswordUrl} tw="border-b border-gray-500 border-dotted">
-                  Mot de passe oublié ?
-                </a>
-              </p>
-              <p tw="mt-8 text-sm text-gray-600 text-center">
-                Vous n'avez pas de compte ?{" "}
+   
+              <p  tw="mt-8 text-sm text-gray-600 text-center">
+           
                 <a href={signupUrl} tw="border-b border-gray-500 border-dotted">
-                  S'inscrire
+      S'inscrire
                 </a>
               </p>
             </FormContainer>
