@@ -9,7 +9,6 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/6418FC.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -72,14 +71,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#qui-sommes-nous">Pourquoi nous choisir ?</NavLink>
-      <NavLink href="/#notre-menus">Découvrir</NavLink>
-      <NavLink href="/#servicess">Services</NavLink>
-      <NavLink href="/components/innerPages/ContactUsPage">Contact</NavLink>
-      <NavLink href="/components/innerPages/LoginPage" tw="lg:ml-12!">
-        Se connecter
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/components/innerPages/SignupPage">S'inscrire</PrimaryLink>
+     
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/components/innerPages/GerantPage">Voir le site</PrimaryLink>
     </NavLinks>
   ];
 
@@ -87,7 +80,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoLink href="/components/innerPages/GerantPage">
       <img src={logo} alt="logo" />
       My Resto
     </LogoLink>

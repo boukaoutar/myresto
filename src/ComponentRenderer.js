@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
 import LoginPage from "pages/Login.js";
+import GerantPage from "pages/Gerant.js";
 import SignupPage from "pages/Signup.js";
 import PricingPage from "pages/Pricing.js";
 import AboutUsPage from "pages/AboutUs.js";
@@ -85,6 +86,12 @@ import FiveColumnDarkFooter from "components/footers/FiveColumnDark.js";
 export const components = {
 
   innerPages: {
+    GerantPage: {
+      component: GerantPage,
+      imageSrc: LoginPageImageSrc,
+      scrollAnimationDisabled: true,
+      url: "/components/innerPages/GerantPage",
+    },
     LoginPage: {
       component: LoginPage,
       imageSrc: LoginPageImageSrc,

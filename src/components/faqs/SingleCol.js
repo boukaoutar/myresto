@@ -40,28 +40,28 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 
 export default ({
   subheading = "FAQS",
-  heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  heading = "Vous avez des questions ?",
+  description = "",
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Comment puis-je faire une réservation sur votre site ?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Il suffit de passer une commande sur notre site et de remplir le formulaire en fournissant les détails requis. Nous vous confirmerons votre réservation par e-mail"
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Avez-vous des options de menu végétariennes ou sans gluten?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Oui, nous avons un large choix de plats végétariens et sans gluten disponibles sur notre menu. Veuillez nous informer de toutes vos restrictions alimentaires lors de la réservation pour que nous puissions vous aider à faire des choix adaptés."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "Acceptez-vous les paiements en ligne?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Le paiement est à la livraison."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Avez-vous des places de stationnement disponibles pour les clients?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Oui, nous avons un grand parking gratuit disponible pour nos clients. Veuillez nous informer si vous avez besoin d'une place pour accéder au restaurant en fauteuil roulant."
     }
   ]
 }) => {
