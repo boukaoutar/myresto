@@ -6,7 +6,7 @@ import mockupImageSrc from "images/6418FC.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { ContentWithPaddingXl, Container as ContainerBase } from "components/misc/Layouts";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import appleIconImageSrc from "images/apple-icon.png";
+import appleIconImageSrc from "images/applee.png";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
 
 const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
@@ -22,7 +22,7 @@ const LinksContainer = tw.div`mt-8 lg:mt-16 flex flex-col items-center sm:block`
 const Link = styled.a`
   ${tw`w-56 p-3 sm:p-4 text-sm sm:text-base font-bold uppercase tracking-wider rounded-full inline-flex justify-center items-center mt-6 first:mt-0 sm:mt-0 sm:ml-8 first:ml-0 bg-gray-100 hocus:bg-gray-300 text-gray-900 hocus:text-gray-900 shadow hover:shadow-lg focus:shadow-outline focus:outline-none transition duration-300`}
   img {
-    ${tw`inline-block h-8 mr-3`}
+    ${tw`inline-block h-10 mr-10`}
   }
   span {
     ${tw`leading-none inline-block`}

@@ -4,6 +4,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
 import LoginPage from "pages/Login.js";
 import GerantPage from "pages/Gerant.js";
+import PanierPage from "pages/Panier.js";
 import SignupPage from "pages/Signup.js";
 import PricingPage from "pages/Pricing.js";
 import AboutUsPage from "pages/AboutUs.js";
@@ -91,6 +92,12 @@ export const components = {
       imageSrc: LoginPageImageSrc,
       scrollAnimationDisabled: true,
       url: "/components/innerPages/GerantPage",
+    },
+    PanierPage: {
+      component: PanierPage,
+      imageSrc: LoginPageImageSrc,
+      scrollAnimationDisabled: true,
+      url: "/components/innerPages/PanierPage",
     },
     LoginPage: {
       component: LoginPage,
