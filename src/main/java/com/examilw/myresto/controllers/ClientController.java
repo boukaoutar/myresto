@@ -3,6 +3,7 @@ package com.examilw.myresto.controllers;
 import com.examilw.myresto.DAO.ClientDao;
 import com.examilw.myresto.modele.Client;
 import com.examilw.myresto.modele.Product;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,16 @@ public class ClientController {
 
     @Autowired
     private ClientDao clientDAO;
+
+
+    @GetMapping("/check-session")
+    public String checkSession(HttpSession session) {
+        if (session.getAttribute("client") != null) {
+            return "session exists";
+        } else {
+            return "session does not exist";
+        }
+    }
 
     @GetMapping("/{email}")
     public Client getClient(@PathVariable String email) {
@@ -33,13 +44,19 @@ public class ClientController {
         clientDAO.createAccount(client,pwd);
     }
     @PostMapping("/Login")
-    public boolean Login(@RequestBody Map<String, String> body) {
+    public boolean Login(@RequestBody Map<String, String> body, HttpSession session) {
         String email = body.get("email");
         String pwd = body.get("password");
         if(clientDAO.checkPassword(email,pwd)){
-           clientDAO.getClient(email);
+            session.setAttribute("client", clientDAO.getClient(email));
            return true;
         } else return false;
+    }
+
+    @PostMapping("/Logout")
+    public boolean logout(HttpSession session) {
+        session.invalidate();
+        return true;
     }
 }
 

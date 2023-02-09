@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Client {
-    private Map<Product, Integer> products;
+    private int id;
     private String email;
     private String firstName;
     private String lastName;
@@ -13,18 +13,17 @@ public class Client {
     public Client() {}
 
     public Client(String email, String firstName, String lastName) {
-        this.products = new HashMap<>();
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public Map<Product, Integer> getProducts() {
-        return products;
+    public int getId() {
+        return id;
     }
 
-    public void setProducts(Map<Product, Integer> products) {
-        this.products = products;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -51,18 +50,7 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public void addProduct(Product product, int quantity) {
-        if (products == null) {
-            products = new HashMap<>();
-        }
-        products.put(product, quantity);
-    }
 
-    public void removeProduct(Product product) {
-        if (products != null) {
-            products.remove(product);
-        }
-    }
 
 }
 
