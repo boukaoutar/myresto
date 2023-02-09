@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import illustration from "images/signup-illustration.svg";
 import logo from "images/6418FC.svg";
+import axios from 'axios';
 import { ReactComponent as SignUpIcon } from "feather-icons/dist/icons/user-plus.svg";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
@@ -33,6 +34,17 @@ const IllustrationImage = styled.div`
   ${props => `background-image: url("${props.imageSrc}");`}
   ${tw`m-12 xl:m-16 w-full max-w-lg bg-contain bg-center bg-no-repeat`}
 `;
+
+const handleSubmit = e => {
+  e.preventDefault()
+  axios
+    .post("localhos:8080/api/clients/createAccount", { email, password })
+    .then(response => {
+      console.log(response)
+    })
+}
+const [email, setEmail] = ""
+const [password, setPassword] = ""
 
 export default ({
   logoLinkUrl = "#",
@@ -63,7 +75,7 @@ export default ({
                 <Input type="password" placeholder="Confirmer votre mot de passe" />
                 <SubmitButton type="submit">
                   <SubmitButtonIcon className="icon" />
-                  <span className="text">{submitButtonText}</span>
+                  <span className="text" onClick={handleSubmit}>{submitButtonText}</span>
                 </SubmitButton>
 
                 <p tw="mt-8 text-sm text-gray-600 text-center">
