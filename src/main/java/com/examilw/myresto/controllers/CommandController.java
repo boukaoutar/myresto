@@ -45,4 +45,12 @@ public class CommandController {
         return commandDAO.getCommand(id);
     }
 
+
+    @GetMapping("/api/products")
+    public List<Product> getAllProducts() {
+        return commandDAO.getAllProduct();
+    }
+
+
+
 }

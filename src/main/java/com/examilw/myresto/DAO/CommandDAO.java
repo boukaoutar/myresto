@@ -188,4 +188,25 @@ public class CommandDAO {
         return null;
     }
 
+    public List<Product> getAllProduct() {
+        String sql = "SELECT * FROM product";
+        List<Product> products = new ArrayList<Product>();
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id_produit = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                double price = resultSet.getDouble("price");
+                String img = resultSet.getString("img");
+                Product product = new Product(id_produit,name,price,img);
+                products.add(product);
+            }
+            return products;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

@@ -31,7 +31,7 @@ public class ClientController {
 
     @GetMapping("/{email}")
     public Client getClient(@PathVariable String email) {
-        return clientDAO.getClient(email);
+         return clientDAO.getClient(email);
     }
 
     @PostMapping("/createAccount")
