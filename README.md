@@ -20,6 +20,13 @@ Pour exécuter ce projet sur votre ordinateur, utilisez la commande suivante dan
 
 Cela démarrera un conteneur Docker pour ce projet et vous pourrez accéder à l'application en accédant à l'adresse IP de votre machine hôte sur le port local 3000 déja spécifié .
 
+### Base de données : 
+#pull l'image mysql
+`docker pull mysql` 
+#Creation et run de l'image mysql
+`docker run --name mysql-myresto -e MYSQL_ROOT_PASSWORD=rootroot  -d mysql:8.0 #connection à la bdd en bash`
+`docker exec -it mysql-myresto bash` 
+
 # Installation Spring Boot
 
 #### Prérequis
