@@ -11,6 +11,19 @@
 
 - Pour le front-end, nous avons opté pour React, un cadre JavaScript populaire qui permet une interaction fluide avec les utilisateurs. La conception de l'interface utilisateur a été effectuée avec soin pour s'assurer que les restaurants puissent facilement accéder et gérer les informations importantes.
 
+# Fonctionnalités 
+
+Le projet My Resto a été conçu avec des fonctionnalités essentielles pour une gestion efficace et une expérience utilisateur agréable pour les restaurants. Les fonctionnalités suivantes ont été implémentées pour atteindre cet objectif :
+
+    Inscription d'utilisateur : cette fonctionnalité permet aux utilisateurs de s'inscrire en fournissant des informations telles que leur nom, leur adresse e-mail et un mot de passe sécurisé.
+
+    Connexion d'utilisateur : cette fonctionnalité permet aux utilisateurs enregistrés de se connecter à leur compte en utilisant leur adresse e-mail et leur mot de passe.
+
+    Affichage de la carte : cette fonctionnalité permet aux utilisateurs de visualiser les différents plats proposés par le restaurant et de les commander en ligne.
+
+    Ajouter au panier : cette fonctionnalité permet aux utilisateurs de sélectionner les plats qu'ils souhaitent commander et de les ajouter à leur panier.
+
+    Gestion des commandes par le gérant : cette fonctionnalité permet au gérant du restaurant de visualiser et de gérer les commandes en ligne, ce qui facilite la gestion de la logistique et de la livraison des plats.
 
 # Installation Docker
 
