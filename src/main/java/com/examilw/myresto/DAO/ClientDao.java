@@ -60,7 +60,7 @@ public class ClientDao {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String password = resultSet.getString("password");
-                if(password == pwd){
+                if(password.equals(pwd)){
                     return true;
                 } else return false;
             }
