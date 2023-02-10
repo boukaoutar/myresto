@@ -77,7 +77,7 @@ export default ({
             <FormContainer>
               <Form>
                 <Input type="email" placeholder="Email"  
-                value="email"
+                value={email}
                  onChange={e => setEmail(e.target.value)} />
                 <Input type="password" placeholder="Mot de passe" 
                 value={password}

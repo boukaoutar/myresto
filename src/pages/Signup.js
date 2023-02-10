@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container as ContainerBase } from "components/misc/Layouts";
 import tw from "twin.macro";
@@ -43,8 +43,10 @@ const handleSubmit = e => {
       console.log(response)
     })
 }
-const [email, setEmail] = ""
-const [password, setPassword] = ""
+const [firstname, setFirstName] = useState()
+const[lastname, setLastName] = useState()
+const [email, setEmail] = useState()
+const [password, setPassword] = useState()
 
 export default ({
   logoLinkUrl = "#",
@@ -69,9 +71,14 @@ export default ({
             <FormContainer>
 
               <Form>
-                <Input type="text" placeholder="Nom Complet" />
-                <Input type="email" placeholder="Email" />
-                <Input type="password" placeholder="Mot de passe" />
+                <Input type="text" placeholder="Prénom" value={firstname}
+                  onChange={e => setFirstName(e.target.value)} />
+                <Input type="text" placeholder="Nom" value={lastname}
+                  onChange={e => setLastName(e.target.value)}/>
+                <Input type="email" placeholder="Email" value={email}
+                  onChange={e => setEmail(e.target.value)} />
+                <Input type="password" placeholder="Mot de passe" value={password}
+                  onChange={e => setPassword(e.target.value)} />
                 <Input type="password" placeholder="Confirmer votre mot de passe" />
                 <SubmitButton type="submit">
                   <SubmitButtonIcon className="icon" />
