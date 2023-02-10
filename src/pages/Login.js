@@ -11,7 +11,16 @@ import axios from 'axios';
 import { useEffect } from "react";
 import { useState } from "react";
 
+const Login=({
+  logoLinkUrl = "#",
+  illustrationImageSrc = illustration,
+  headingText = "Se connecter à My Resto",
+  submitButtonText = "Se connecter",
+  SubmitButtonIcon = LoginIcon,
+  forgotPasswordUrl = "#",
+  signupUrl = "/components/innerPages/SignupPage",
 
+})=>{
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
 const MainContainer = tw.div`lg:w-1/2 xl:w-5/12 p-6 sm:p-12`;
@@ -41,27 +50,18 @@ const IllustrationImage = styled.div`
 const handleSubmit = e => {
   e.preventDefault()
   axios
-    .post("localhos:8080/api/clients/Login", { email, password })
+    .post("http://localhost:8080/api/clients/Login", { email, password })
     .then(response => {
       console.log(response)
     })
 }
 
-
 const [email, setEmail] = useState()
 const [password, setPassword] = useState()
 
-export default ({
-  logoLinkUrl = "#",
-  illustrationImageSrc = illustration,
-  headingText = "Se connecter à My Resto",
-  submitButtonText = "Se connecter",
-  SubmitButtonIcon = LoginIcon,
-  forgotPasswordUrl = "#",
-  signupUrl = "/components/innerPages/SignupPage",
 
-}) =>
- (
+
+return (
   <AnimationRevealPage>
     <Container>
       <Content>
@@ -77,7 +77,7 @@ export default ({
             <FormContainer>
               <Form>
                 <Input type="email" placeholder="Email"  
-                value="email"
+                value={email}
                  onChange={e => setEmail(e.target.value)} />
                 <Input type="password" placeholder="Mot de passe" 
                 value={password}
@@ -108,4 +108,5 @@ export default ({
       </Content>
     </Container>
   </AnimationRevealPage>
-);
+);}
+export default Login;
