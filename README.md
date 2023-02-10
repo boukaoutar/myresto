@@ -1,4 +1,4 @@
-# My Resto: Une application de gestion de restaurant construite avec Spring Boot, React et MySQL
+# My Resto: Une application de gestion de restaurant construite avec Docker, Spring Boot, React et MySQL
 
 
 
