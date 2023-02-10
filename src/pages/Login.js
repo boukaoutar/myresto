@@ -10,6 +10,7 @@ import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg
 import axios from 'axios';
 import { useEffect } from "react";
 import { useState } from "react";
+  import { useNavigate } from 'react-router-dom';
 
 const Login=({
   logoLinkUrl = "#",
@@ -20,7 +21,13 @@ const Login=({
   forgotPasswordUrl = "#",
   signupUrl = "/components/innerPages/SignupPage",
 
-})=>{
+}) => {
+const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+const navigate = useNavigate();
+
+
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
 const MainContainer = tw.div`lg:w-1/2 xl:w-5/12 p-6 sm:p-12`;
@@ -49,15 +56,16 @@ const IllustrationImage = styled.div`
 
 const handleSubmit = e => {
   e.preventDefault()
-  axios
-    .post("http://localhost:8080/api/clients/Login", { email, password })
-    .then(response => {
-      console.log(response)
-    })
+                    axios.post("http://localhost:8080/api/clients/Login", { email, password })
+                          .then(response => {
+                            if (response.data === true) {
+                             navigate('/components/innerPages/PanierPage');
+                            }
+                          })
+
 }
 
-const [email, setEmail] = useState()
-const [password, setPassword] = useState()
+
 
 
 
@@ -75,7 +83,7 @@ return (
           <MainContent>
             <Heading>{headingText}</Heading>
             <FormContainer>
-              <Form>
+              
                 <Input type="email" placeholder="Email"  
                 value={email}
                  onChange={e => setEmail(e.target.value)} />
@@ -85,9 +93,9 @@ return (
                 />
                 <SubmitButton type="submit">
                   <SubmitButtonIcon className="icon" />
-                  <span className="text" onClick={handleSubmit}>{submitButtonText}</span>
+                  <span className="text" onClick={e=>handleSubmit(e)}>{submitButtonText}</span>
                 </SubmitButton>
-              </Form>
+              
    
               <p  tw="mt-8 text-sm text-gray-600 text-center">
            

@@ -9,6 +9,14 @@ import logo from "images/6418FC.svg";
 import axios from 'axios';
 import { ReactComponent as SignUpIcon } from "feather-icons/dist/icons/user-plus.svg";
 
+const SignUp= ({
+  logoLinkUrl = "#",
+  illustrationImageSrc = illustration,
+  headingText = "Rejoindre My Resto",
+  submitButtonText = "S'inscrire",
+  SubmitButtonIcon = SignUpIcon,
+  signInUrl = "/components/innerPages/LoginPage"
+}) => {
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
 const MainContainer = tw.div`lg:w-1/2 xl:w-5/12 p-6 sm:p-12`;
@@ -38,24 +46,17 @@ const IllustrationImage = styled.div`
 const handleSubmit = e => {
   e.preventDefault()
   axios
-    .post("localhos:8080/api/clients/createAccount", { email, password })
+    .post("http://localhost:8080/api/clients/createAccount", { firstName, lastName, email, password})
     .then(response => {
       console.log(response)
     })
 }
-const [firstname, setFirstName] = useState()
-const[lastname, setLastName] = useState()
+const [firstName, setFirstName] = useState()
+const[lastName, setLastName] = useState()
 const [email, setEmail] = useState()
 const [password, setPassword] = useState()
 
-export default ({
-  logoLinkUrl = "#",
-  illustrationImageSrc = illustration,
-  headingText = "Rejoindre My Resto",
-  submitButtonText = "S'inscrire",
-  SubmitButtonIcon = SignUpIcon,
-  signInUrl = "/components/innerPages/LoginPage"
-}) => (
+return(
   <AnimationRevealPage>
     <Container>
       <Content>
@@ -70,10 +71,10 @@ export default ({
             <Heading>{headingText}</Heading>
             <FormContainer>
 
-              <Form>
-                <Input type="text" placeholder="Prénom" value={firstname}
+
+                <Input type="text" placeholder="Prénom" value={firstName}
                   onChange={e => setFirstName(e.target.value)} />
-                <Input type="text" placeholder="Nom" value={lastname}
+                <Input type="text" placeholder="Nom" value={lastName}
                   onChange={e => setLastName(e.target.value)}/>
                 <Input type="email" placeholder="Email" value={email}
                   onChange={e => setEmail(e.target.value)} />
@@ -82,7 +83,7 @@ export default ({
                 <Input type="password" placeholder="Confirmer votre mot de passe" />
                 <SubmitButton type="submit">
                   <SubmitButtonIcon className="icon" />
-                  <span className="text" onClick={handleSubmit}>{submitButtonText}</span>
+                  <span className="text" onClick={e=>handleSubmit(e)}>{submitButtonText}</span>
                 </SubmitButton>
 
                 <p tw="mt-8 text-sm text-gray-600 text-center">
@@ -91,7 +92,7 @@ export default ({
                     Se connecter
                   </a>
                 </p>
-              </Form>
+
             </FormContainer>
           </MainContent>
         </MainContainer>
@@ -101,4 +102,5 @@ export default ({
       </Content>
     </Container>
   </AnimationRevealPage>
-);
+);}
+export default SignUp;

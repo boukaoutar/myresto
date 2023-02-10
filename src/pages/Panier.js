@@ -19,13 +19,13 @@ export default () => {
         <ul>
           <li class="item item-heading">Produits</li>
           <li class="price">Prix</li>
-          <li class="subtotal">Total</li>
+          
         </ul>
       </div>
       <div class="basket-product">
         <div class="item">
           <div class="product-image">
-            <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame"/>
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Placholder Image 2" class="product-frame"/>
           </div>
           <div class="product-details">
             <h1><strong><span class="item-quantity"></span> Eliza J</strong> Lace Sleeve Cuff Dress</h1>
@@ -34,15 +34,15 @@ export default () => {
           </div>
         </div>
         <div class="price">26.00</div>
-        <div class="subtotal">104.00</div>
+      
         <div class="remove">
-          <button>Remove</button>
+          <button>Supprimer</button>
         </div>
       </div>
       <div class="basket-product">
         <div class="item">
           <div class="product-image">
-            <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame"/>
+            <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Placholder Image 2" class="product-frame"/>
           </div>
           <div class="product-details">
             <h1><strong><span class="item-quantity"></span> Whistles</strong> Amella Lace Midi Dress</h1>
@@ -51,9 +51,9 @@ export default () => {
           </div>
         </div>
         <div class="price">26.00</div>
-        <div class="subtotal">26.00</div>
+  
         <div class="remove">
-          <button>Remove</button>
+          <button>Supprimer</button>
         </div>
       </div>
     </div>

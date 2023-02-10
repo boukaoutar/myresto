@@ -26,8 +26,8 @@ export default () => {
             <tbody>
                 <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>10/11/2022</td>
+                <td>100</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -35,8 +35,8 @@ export default () => {
                 </tr>
                 <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
+                <td>05/01/2022</td>
+                <td>200</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -44,8 +44,8 @@ export default () => {
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>07/08/2022</td>
+                <td>100</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -53,8 +53,8 @@ export default () => {
                   </tr>
                   <tr>
                 <th scope="row">4</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>07/08/2022</td>
+                <td>150</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -62,8 +62,8 @@ export default () => {
                   </tr>
                   <tr>
                 <th scope="row">5</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>01/02/2023</td>
+                <td>10</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -71,8 +71,8 @@ export default () => {
                   </tr>
                   <tr>
                 <th scope="row">6</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>01/02/2023</td>
+                <td>20</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -80,8 +80,8 @@ export default () => {
                   </tr>
                   <tr>
                 <th scope="row">7</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>10/02/2023</td>
+                <td>30</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
@@ -89,8 +89,8 @@ export default () => {
                   </tr>
                   <tr>
                 <th scope="row">8</th>
-                <td>Larry</td>
-                <td>the Bird</td>
+                <td>12/12/2022</td>
+                <td>50</td>
                 <td>
                     <button type="button" class="button button1">Accepter</button> &nbsp;
                     <button type="button" class="button button2">Refuser</button>
