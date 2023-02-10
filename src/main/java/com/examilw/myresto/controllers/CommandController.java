@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("http://localhost:3001")
 
 public class CommandController {
 
@@ -44,13 +44,10 @@ public class CommandController {
     public Command getCommand(@PathVariable int id) {
         return commandDAO.getCommand(id);
     }
-
-
     @GetMapping("/api/products")
     public List<Product> getAllProducts() {
         return commandDAO.getAllProduct();
     }
-
 
 
 }

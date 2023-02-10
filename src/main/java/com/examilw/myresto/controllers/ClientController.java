@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("http://localhost:3001")
 @RequestMapping("/api/clients")
 public class ClientController {
 
@@ -31,7 +31,7 @@ public class ClientController {
 
     @GetMapping("/{email}")
     public Client getClient(@PathVariable String email) {
-         return clientDAO.getClient(email);
+        return clientDAO.getClient(email);
     }
 
     @PostMapping("/createAccount")
