@@ -3,15 +3,14 @@
 
 # Analyse & Conception
 
-Lors de la phase d'analyse et de conception du projet My Resto, nous avons mis l'accent sur la mise en place d'une infrastructure solide pour garantir une gestion efficace et une expérience utilisateur optimale pour les restaurants.
+- Lors de la phase d'analyse et de conception du projet My Resto, nous avons mis l'accent sur la mise en place d'une infrastructure solide pour garantir une gestion efficace et une expérience utilisateur optimale pour les restaurants.
 
-Pour ce faire, nous avons utilisé Docker pour créer un environnement de développement cohérent pour toutes les parties du projet. Cela a permis de faciliter les tests et les déploiements, ce qui est crucial pour une application de gestion de restaurant en production.
+- Pour ce faire, nous avons utilisé Docker pour créer un environnement de développement cohérent pour toutes les parties du projet. Cela a permis de faciliter les tests et les déploiements, ce qui est crucial pour une application de gestion de restaurant en production.
 
-Nous avons choisi de construire le back-end de l'application avec Spring Boot, un framework Java populaire et puissant qui offre une flexibilité et une facilité de développement pour les développeurs. De plus, nous avons intégré une base de données MySQL pour stocker les données importantes telles que les menus, les commandes et les informations sur les clients.
+- Nous avons choisi de construire le back-end de l'application avec Spring Boot, un framework Java populaire et puissant qui offre une flexibilité et une facilité de développement pour les développeurs. De plus, nous avons intégré une base de données MySQL pour stocker les données importantes telles que les menus, les commandes et les informations sur les clients.
 
-Pour le front-end, nous avons opté pour React, un cadre JavaScript populaire qui permet une interaction fluide avec les utilisateurs. La conception de l'interface utilisateur a été effectuée avec soin pour s'assurer que les restaurants puissent facilement accéder et gérer les informations importantes.
+- Pour le front-end, nous avons opté pour React, un cadre JavaScript populaire qui permet une interaction fluide avec les utilisateurs. La conception de l'interface utilisateur a été effectuée avec soin pour s'assurer que les restaurants puissent facilement accéder et gérer les informations importantes.
 
-En résumé, la phase d'analyse et de conception du projet My Resto a permis de définir une infrastructure solide pour garantir une gestion efficace et une expérience utilisateur optimale pour les restaurants.
 
 # Installation Docker
 
