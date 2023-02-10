@@ -25,6 +25,30 @@ Le projet My Resto a été conçu avec des fonctionnalités essentielles pour un
 
     Gestion des commandes par le gérant : cette fonctionnalité permet au gérant du restaurant de visualiser et de gérer les commandes en ligne, ce qui facilite la gestion de la logistique et de la livraison des plats.
 
+# Architecture
+- L'architecture du site web "My Resto" est basée sur les principes de modularité et de flexibilité. En utilisant Spring Boot et Spring Data, nous avons créé une structure qui permet une maintenance et une évolution facile de l'application.
+
+- Spring Boot offre une architecture de microservices qui permet de diviser l'application en composants indépendants et réutilisables. Cela signifie que chaque composant peut être développé, testé et déployé séparément, ce qui facilite la maintenance et la mise à jour du site "My Resto".
+
+- De plus, Spring Data permet une gestion centralisée des données grâce à sa couche d'abstraction qui cache les détails de la base de données. Cela signifie que les développeurs peuvent se concentrer sur la fonctionnalité de l'application sans se soucier de la gestion des données. En cas de changement de la base de données, il suffit de modifier la couche d'abstraction sans toucher au reste de l'application.
+
+# Norme de codage
+
+Les normes de codage sur lesquelles nous avons basé : 
+
+1.	Nommage cohérent: Il est important de définir et de suivre des conventions de nommage pour les variables, les fonctions, les classes, etc. Cela peut aider à rendre le code plus facile à lire et à comprendre pour les développeurs actuels et futurs.
+2.	Documentation du code: Il est essentiel de documenter le code en utilisant des commentaires et des javadocs. Cela peut aider à comprendre rapidement le fonctionnement du code et à faciliter la maintenance.
+3.	Organisation du code: Il est important de s'assurer que le code est organisé de manière cohérente et logique, avec des fichiers séparés pour les différentes parties de l'application.
+4.	Gestion des erreurs: Il est important de gérer efficacement les erreurs pour éviter les bugs et améliorer la stabilité de l'application.
+5.	Tests unitaires: Il est important de tester le code pour s'assurer qu'il fonctionne correctement et pour détecter les erreurs éventuelles avant la production.
+
+# Robustesse
+
+- Le site web "My Resto" conçu avec Spring Boot et Spring Data est conçu pour être robuste et fiable. Les technologies utilisées garantissent une performance optimale, une scalabilité facile et une sécurité renforcée.
+Spring Data est une bibliothèque qui simplifie la gestion de la persistance de données dans les applications Java. Elle permet de travailler avec des bases de données relationnelles et NoSQL de manière transparente et efficace. Cela garantit la fiabilité des données stockées sur le site "My Resto", ainsi que la rapidité de traitement de ces données.
+
+- Spring Data est une bibliothèque qui simplifie la gestion de la persistance de données dans les applications Java. Elle permet de travailler avec des bases de données relationnelles et NoSQL de manière transparente et efficace. Cela garantit la fiabilité des données stockées sur le site "My Resto", ainsi que la rapidité de traitement de ces donnée
+
 # Installation Docker
 
 Avant de pouvoir exécuter ce projet sur votre ordinateur, vous devez installer les dépendances suivantes :
